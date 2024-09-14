@@ -1,0 +1,103 @@
+#container {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  #quadrado {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+  }
+  
+  #triangulo {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid green;
+  }
+  
+  #circulo {
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 50%;
+  }
+  
+  #estrela {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+  
+  .coracao {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .coracao:before,
+  .coracao:after {
+    position: absolute;
+    content: "";
+    left: 24px;
+    top: 0;
+    width: 26px;
+    height: 50px;
+    background-color: pink;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .coracao:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+
+  #ceu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #007bff 0%, #00C8FF 50%, #FFFFFF 100%);
+    z-index: -1;
+  }
+  
+  #sol {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #seta-direita {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent black transparent;
+    position: relative;
+    display: inline-block;
+  }
+  
+  #seta-direita:before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    width: 60px;
+    height: 30px;
+    background-color: black;
+  }
